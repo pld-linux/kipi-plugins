@@ -12,6 +12,7 @@ Source0:	http://dl.sourceforge.net/digikam/%{name}-%{version}-%{_beta}.tar.bz2
 # Source0-md5:	024785a86202f45116a0439232933545
 URL:		http://digikam.sourceforge.net/
 BuildRequires:	libkipi-devel >= 0.1
+BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
