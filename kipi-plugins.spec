@@ -1,18 +1,31 @@
 
-%define _beta	beta1
+%define _beta	beta2
 
 Summary:	Library KIPI plugins
 Summary(pl):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
-Version:	0.1
+Version:	0.1.0
 Release:	0.%{_beta}.1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/digikam/%{name}-%{version}-%{_beta}.tar.bz2
-# Source0-md5:	024785a86202f45116a0439232933545
+# Source0-md5:	1dd0cb05e0c7da43861d2bf0affaa4b3
 URL:		http://digikam.sourceforge.net/
+BuildRequires:	X11-devel
+BuildRequires:	gettext-devel
+BuildRequires:	imlib2-devel
+BuildRequires:	kdelibs-devel
+BuildRequires:	libexif-devel
+BuildRequires:	libgphoto2-devel
+BuildRequires:	libjpeg-devel
+BuildRequires:	libkexif-devel
 BuildRequires:	libkipi-devel >= 0.1
+BuildRequires:	libpng-devel
+BuildRequires:	libstdc++-devel
+BuildRequires:	libtiff-devel
+BuildRequires:	qt-devel
 BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
