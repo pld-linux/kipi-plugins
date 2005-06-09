@@ -5,7 +5,7 @@ Summary:	Library KIPI plugins
 Summary(pl):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
 Version:	0.1.0
-Release:	0.%{_beta}.1
+Release:	0.%{_beta}.2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/digikam/%{name}-%{version}-%{_beta}.tar.bz2
@@ -38,7 +38,8 @@ Wtyczki dla biblioteki KIPI.
 %setup -q -n %{name}-%{version}-%{_beta}
 
 %build
-%configure
+%configure \
+	--with-qt-libraries=%{_libdir}
 %{__make}
 
 %install
