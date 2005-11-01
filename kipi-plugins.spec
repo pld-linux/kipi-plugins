@@ -5,7 +5,7 @@ Summary:	Library KIPI plugins
 Summary(pl):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
 Version:	0.1.0
-Release:	0.%{_beta}.3
+Release:	0.%{_beta}.4
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/digikam/%{name}-%{version}-%{_beta}.tar.bz2
@@ -49,6 +49,8 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	kde_htmldir=%{_kdedocdir} \
 	kde_libs_htmldir=%{_kdedocdir}
+
+rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/xx
 
 %find_lang %{name} --all-name --with-kde
 
