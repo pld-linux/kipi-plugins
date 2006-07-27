@@ -1,15 +1,13 @@
 
-%define _beta	beta2
-
 Summary:	Library KIPI plugins
 Summary(pl):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
-Version:	0.1.0
-Release:	0.%{_beta}.5
+Version:	0.1.2
+Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/digikam/%{name}-%{version}-%{_beta}.tar.bz2
-# Source0-md5:	1dd0cb05e0c7da43861d2bf0affaa4b3
+Source0:	http://dl.sourceforge.net/digikam/%{name}-%{version}.tar.bz2
+# Source0-md5:	4c06a75f4d49f44c55ace9ed46e0f592
 URL:		http://digikam.sourceforge.net/
 BuildRequires:	X11-devel
 BuildRequires:	gettext-devel
@@ -35,7 +33,7 @@ Library KIPI plugins.
 Wtyczki dla biblioteki KIPI.
 
 %prep
-%setup -q -n %{name}-%{version}-%{_beta}
+%setup -q
 
 %build
 %configure \
