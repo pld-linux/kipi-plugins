@@ -1,4 +1,3 @@
-
 Summary:	Library KIPI plugins
 Summary(pl):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
@@ -9,20 +8,24 @@ Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
 # Source0-md5:	4c06a75f4d49f44c55ace9ed46e0f592
 URL:		http://extragear.kde.org/apps/kipi/
+BuildRequires:	ImageMagick-c++-devel
 BuildRequires:	gettext-devel
 BuildRequires:	imlib2-devel
 BuildRequires:	kdelibs-devel
 BuildRequires:	libexif-devel
 BuildRequires:	libgphoto2-devel
 BuildRequires:	libjpeg-devel
-BuildRequires:	libkexif-devel
+BuildRequires:	libkexif-devel >= 0.1
 BuildRequires:	libkipi-devel >= 0.1
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtiff-devel
+BuildRequires:	libxslt-devel
+BuildRequires:	pkgconfig
 BuildRequires:	qt-devel
 BuildRequires:	rpmbuild(macros) >= 1.129
-BuildRequires:	xorg-lib-libX11-devel
+# because of current K_PATH_X definition
+BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
