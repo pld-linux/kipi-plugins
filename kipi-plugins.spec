@@ -6,10 +6,9 @@ Version:	0.1.2
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/sourceforge/kipi/kipi-plugins-0.1.2.tar.bz2
+Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
 # Source0-md5:	4c06a75f4d49f44c55ace9ed46e0f592
 URL:		http://extragear.kde.org/apps/kipi/
-BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	gettext-devel
 BuildRequires:	imlib2-devel
 BuildRequires:	kdelibs-devel
@@ -23,6 +22,7 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	qt-devel
 BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -55,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/xx
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}.lang 
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
