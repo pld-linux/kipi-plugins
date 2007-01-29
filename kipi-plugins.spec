@@ -1,14 +1,15 @@
 Summary:	Library KIPI plugins
 Summary(pl):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
-Version:	0.1.2
+Version:	0.1.3
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
-# Source0-md5:	4c06a75f4d49f44c55ace9ed46e0f592
+# Source0-md5:	7b8e55906b5d08280ab3ad3c2b43e8ab
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	ImageMagick-c++-devel
+BuildRequires:	exiv2-devel >= 0.12
 BuildRequires:	gettext-devel
 BuildRequires:	imlib2-devel
 BuildRequires:	kdelibs-devel
@@ -58,12 +59,17 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/xx
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
+
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/kde3/*.so
+%attr(755,root,root) %{_libdir}/libkipiplugins.so.*.*.*
 %{_libdir}/kde3/*.la
 %{_datadir}/apps/*
 %{_datadir}/services/*
+%{_datadir}/config.kcfg/htmlexportconfig.kcfg
 %{_mandir}/man1/*
