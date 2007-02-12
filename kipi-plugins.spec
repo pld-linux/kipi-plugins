@@ -1,5 +1,5 @@
 Summary:	Library KIPI plugins
-Summary(pl):	Wtyczki dla biblioteki KIPI
+Summary(pl.UTF-8):   Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
 Version:	0.1.3
 Release:	1
@@ -33,7 +33,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Library KIPI plugins.
 
-%description -l pl
+%description -l pl.UTF-8
 Wtyczki dla biblioteki KIPI.
 
 %prep
