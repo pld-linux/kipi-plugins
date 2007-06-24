@@ -1,12 +1,16 @@
+
+%define		_beta	beta2
+
 Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
-Version:	0.1.3
-Release:	1
+Version:	0.1.4
+Release:	0.%{_beta}.1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
-# Source0-md5:	7b8e55906b5d08280ab3ad3c2b43e8ab
+Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}-%{_beta}.tar.bz2
+# Source0-md5:	073484de3cf98083c4b2da6eb0602cb7
+Patch0:		kde-ac260-lt.patch
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	ImageMagick-c++-devel
 BuildRequires:	exiv2-devel >= 0.12
@@ -37,9 +41,11 @@ Library KIPI plugins.
 Wtyczki dla biblioteki KIPI.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}-%{_beta}
+%patch0 -p1
 
 %build
+%{__make} -f admin/Makefile.common cvs
 %configure \
 	--with-qt-libraries=%{_libdir}
 %{__make}
@@ -53,6 +59,8 @@ rm -rf $RPM_BUILD_ROOT
 	kde_libs_htmldir=%{_kdedocdir}
 
 rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/xx
+rm $RPM_BUILD_ROOT%{_libdir}/kde3/*.la
+rm $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %find_lang %{name} --all-name --with-kde
 
@@ -68,7 +76,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/kde3/*.so
 %attr(755,root,root) %{_libdir}/libkipiplugins.so.*.*.*
-%{_libdir}/kde3/*.la
 %{_datadir}/apps/*
 %{_datadir}/services/*
 %{_datadir}/config.kcfg/htmlexportconfig.kcfg
