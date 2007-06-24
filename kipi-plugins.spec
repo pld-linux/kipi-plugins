@@ -13,15 +13,15 @@ Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}-%{_beta}.tar.bz2
 Patch0:		kde-ac260-lt.patch
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	ImageMagick-c++-devel
-BuildRequires:	exiv2-devel >= 0.12
+BuildRequires:	exiv2-devel >= 0.14
 BuildRequires:	gettext-devel
 BuildRequires:	imlib2-devel
 BuildRequires:	kdelibs-devel
 BuildRequires:	libexif-devel
 BuildRequires:	libgphoto2-devel
 BuildRequires:	libjpeg-devel
-BuildRequires:	libkexif-devel >= 0.1
-BuildRequires:	libkipi-devel >= 0.1
+BuildRequires:	libkexif-devel >= 0.2.5
+BuildRequires:	libkipi-devel >= 0.1.5
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtiff-devel
