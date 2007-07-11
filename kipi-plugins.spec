@@ -1,15 +1,13 @@
 
-%define		_beta	beta2
-
 Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
 Version:	0.1.4
-Release:	0.%{_beta}.1
+Release:	0.1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}-%{_beta}.tar.bz2
-# Source0-md5:	073484de3cf98083c4b2da6eb0602cb7
+Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
+# Source0-md5:	62469960593284b62302bde75a898c46
 Patch0:		kde-ac260-lt.patch
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	ImageMagick-c++-devel
@@ -41,7 +39,7 @@ Library KIPI plugins.
 Wtyczki dla biblioteki KIPI.
 
 %prep
-%setup -q -n %{name}-%{version}-%{_beta}
+%setup -q -n %{name}-%{version}
 %patch0 -p1
 
 %build
