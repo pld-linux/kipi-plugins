@@ -1,12 +1,13 @@
 Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
-Version:	0.1.3
+Version:	0.1.4
 Release:	1
-License:	GPL
+License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
-# Source0-md5:	7b8e55906b5d08280ab3ad3c2b43e8ab
+# Source0-md5:	62469960593284b62302bde75a898c46
+Patch0:		kde-ac260-lt.patch
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	ImageMagick-c++-devel
 BuildRequires:	exiv2-devel >= 0.12
@@ -17,6 +18,8 @@ BuildRequires:	libexif-devel
 BuildRequires:	libgphoto2-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libkexif-devel >= 0.1
+BuildRequires:	libkdcraw-devel
+BuildRequires:	libkexiv2-devel
 BuildRequires:	libkipi-devel >= 0.1
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
@@ -38,6 +41,7 @@ Wtyczki dla biblioteki KIPI.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure \
