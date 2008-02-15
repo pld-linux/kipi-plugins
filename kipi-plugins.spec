@@ -73,7 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde3/*.so
 %attr(755,root,root) %{_libdir}/libkipiplugins.so.*.*.*
 %{_libdir}/kde3/*.la
-%{_datadir}/apps/*
+%{_datadir}/apps/* # specify excplicit dirs here (to avoid packaging kde dirs)
 %{_datadir}/services/*
 %{_datadir}/config.kcfg/htmlexportconfig.kcfg
 %{_mandir}/man1/*
