@@ -33,8 +33,8 @@ BuildRequires:	libtiff-devel
 BuildRequires:	libxml2-devel >= 2.0.0
 BuildRequires:	libxslt-devel
 BuildRequires:	pkgconfig
-BuildRequires:	qt4-build >= 4.4.3
-BuildRequires:	qt4-qmake >= 4.4.3
+BuildRequires:	qt4-build >= %{qtver}
+BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.129
 # because of current K_PATH_X definition
 BuildRequires:	xorg-lib-libXt-devel
