@@ -1,5 +1,6 @@
 #
-%define	_beta	beta3
+%define		_beta	beta3
+%define		qtver	4.4.3
 
 Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
@@ -11,6 +12,12 @@ Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}-%{_beta}.tar.bz2
 # Source0-md5:	c9d6daa55c55966b93347311e87804dd
 URL:		http://extragear.kde.org/apps/kipi/
+BuildRequires:	Qt3Support-devel >= %{qtver}
+BuildRequires:	QtCore-devel >= %{qtver}
+BuildRequires:	QtDBus-devel >= %{qtver}
+BuildRequires:	QtGui-devel >= %{qtver}
+BuildRequires:	QtNetwork-devel >= %{qtver}
+BuildRequires:	QtOpenGL-devel >= %{qtver}
 BuildRequires:	automoc4
 BuildRequires:	cmake >= 2.6.1-2
 BuildRequires:	exiv2-devel >= 0.12
