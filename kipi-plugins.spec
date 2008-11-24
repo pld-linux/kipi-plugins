@@ -64,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 
 rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/xx
 
-%find_lang %{name} --all-name --with-kde
+%find_lang %{name} --all-name
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -75,7 +75,21 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
-%attr(755,root,root) %{_libdir}/kde4/*.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_acquireimages.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_dngconverter.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_flickrexport.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_galleryexport.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_gpssync.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_htmlexport.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_imageviewer.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_jpeglossless.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_metadataedit.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_picasawebexport.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_rawconverter.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_sendimages.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_simpleviewer.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_slideshow.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_timeadjust.so
 %attr(755,root,root) %{_libdir}/libkipiplugins.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkipiplugins.so.1
 %{_datadir}/apps/kipiplugin_galleryexport
