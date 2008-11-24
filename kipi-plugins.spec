@@ -17,6 +17,7 @@ BuildRequires:	exiv2-devel >= 0.12
 BuildRequires:	expat-devel
 BuildRequires:	gettext-devel
 BuildRequires:	imlib2-devel
+BuildRequires:	kde4-kdegraphics-devel
 BuildRequires:	kde4-kdelibs-devel
 BuildRequires:	libgphoto2-devel
 BuildRequires:	libjpeg-devel
