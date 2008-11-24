@@ -11,19 +11,14 @@ Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}-%{_beta}.tar.bz2
 # Source0-md5:	c9d6daa55c55966b93347311e87804dd
 URL:		http://extragear.kde.org/apps/kipi/
-BuildRequires:	ImageMagick-c++-devel
 BuildRequires:	automoc4
 BuildRequires:	exiv2-devel >= 0.12
 BuildRequires:	expat-devel
 BuildRequires:	gettext-devel
-BuildRequires:	imlib2-devel
 BuildRequires:	kde4-kdegraphics-devel
 BuildRequires:	kde4-kdelibs-devel
 BuildRequires:	libgphoto2-devel
 BuildRequires:	libjpeg-devel
-BuildRequires:	libkdcraw-devel >= 0.2.0
-BuildRequires:	libkexiv2-devel >= 0.2.0
-BuildRequires:	libkipi-devel >= 0.2.0
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtiff-devel
