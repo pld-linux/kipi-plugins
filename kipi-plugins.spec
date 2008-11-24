@@ -12,23 +12,25 @@ Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}-%{_beta}.tar.bz2
 # Source0-md5:	c9d6daa55c55966b93347311e87804dd
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	ImageMagick-c++-devel
-BuildRequires:	exiv2-devel >= 0.12
 BuildRequires:	automoc4
+BuildRequires:	exiv2-devel >= 0.12
+BuildRequires:	expat-devel
 BuildRequires:	gettext-devel
 BuildRequires:	imlib2-devel
 BuildRequires:	kde4-kdelibs-devel
 BuildRequires:	libgphoto2-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libkdcraw-devel >= 0.2.0
-BuildRequires:	libkexif-devel >= 0.1
 BuildRequires:	libkexiv2-devel >= 0.2.0
 BuildRequires:	libkipi-devel >= 0.2.0
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtiff-devel
+BuildRequires:	libxml2-devel >= 2.0.0
 BuildRequires:	libxslt-devel
 BuildRequires:	pkgconfig
-BuildRequires:	qt4-build	
+BuildRequires:	qt4-build >= 4.4.3
+BuildRequires:	qt4-qmake >= 4.4.3
 BuildRequires:	rpmbuild(macros) >= 1.129
 # because of current K_PATH_X definition
 BuildRequires:	xorg-lib-libXt-devel
