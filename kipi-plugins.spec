@@ -42,6 +42,7 @@ Wtyczki dla biblioteki KIPI.
 %prep
 %setup -q -n %{name}-%{version}-%{_beta}
 
+%build
 install -d build
 cd build
 %cmake \
