@@ -1,5 +1,5 @@
 #
-%define		_beta	beta3
+%define		_beta	beta4
 %define		qtver	4.4.3
 
 Summary:	Library KIPI plugins
@@ -10,7 +10,7 @@ Release:	0.%{_beta}.1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}-%{_beta}.tar.bz2
-# Source0-md5:	c9d6daa55c55966b93347311e87804dd
+# Source0-md5:	1435ecd2c58d2ef95f155be057493296
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
@@ -83,16 +83,20 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
+%attr(755,root,root) %{_bindir}/dngconverter
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_acquireimages.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_calendar.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_dngconverter.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_flickrexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_galleryexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_gpssync.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_htmlexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_imageviewer.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_ipodexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_jpeglossless.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_metadataedit.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_picasawebexport.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_printwizard.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_rawconverter.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_sendimages.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_simpleviewer.so
@@ -107,4 +111,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/apps/kipiplugin_simpleviewerexport
 %{_datadir}/apps/kipiplugin_slideshow
 %{_datadir}/kde4/services/kipiplugin_*.desktop
+%{_desktopdir}/kde4/dngconverter.desktop
 %{_iconsdir}/hicolor/*/*
