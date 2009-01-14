@@ -1,5 +1,5 @@
 #
-%define		_beta	beta4
+%define		_beta	beta6
 %define		qtver	4.4.3
 
 Summary:	Library KIPI plugins
@@ -10,7 +10,7 @@ Release:	0.%{_beta}.1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}-%{_beta}.tar.bz2
-# Source0-md5:	1435ecd2c58d2ef95f155be057493296
+# Source0-md5:	0442a58f2f9a68163025c205d89269d0
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
@@ -87,6 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_acquireimages.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_calendar.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_dngconverter.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_fbexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_flickrexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_galleryexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_gpssync.so
@@ -101,6 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_sendimages.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_simpleviewer.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_slideshow.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_smugexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_timeadjust.so
 %attr(755,root,root) %{_libdir}/libkipiplugins.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkipiplugins.so.1
