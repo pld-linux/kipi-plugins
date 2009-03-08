@@ -1,5 +1,5 @@
 #
-%define		_beta	beta6
+%define		_beta	rc2
 %define		qtver	4.4.3
 
 Summary:	Library KIPI plugins
@@ -10,7 +10,7 @@ Release:	0.%{_beta}.1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}-%{_beta}.tar.bz2
-# Source0-md5:	0442a58f2f9a68163025c205d89269d0
+# Source0-md5:	e853a7929749e69f59e5c7bc9cdd8598
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
@@ -85,9 +85,10 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/dngconverter
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_acquireimages.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_advancedslideshow.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_calendar.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_dngconverter.so
-%attr(755,root,root) %{_libdir}/kde4/kipiplugin_fbexport.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_fb.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_flickrexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_galleryexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_gpssync.so
@@ -101,17 +102,16 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_rawconverter.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_sendimages.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_simpleviewer.so
-%attr(755,root,root) %{_libdir}/kde4/kipiplugin_slideshow.so
-%attr(755,root,root) %{_libdir}/kde4/kipiplugin_smugexport.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_smug.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_timeadjust.so
 %attr(755,root,root) %{_libdir}/libkipiplugins.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkipiplugins.so.1
+%{_datadir}/apps/kipiplugin_advancedslideshow
 %{_datadir}/apps/kipiplugin_galleryexport
 %{_datadir}/apps/kipiplugin_htmlexport
 %{_datadir}/apps/kipiplugin_imageviewer
 %{_datadir}/apps/kipiplugin_metadataedit
 %{_datadir}/apps/kipiplugin_simpleviewerexport
-%{_datadir}/apps/kipiplugin_slideshow
 %{_datadir}/kde4/services/kipiplugin_*.desktop
 %{_desktopdir}/kde4/dngconverter.desktop
 %{_iconsdir}/hicolor/*/*
