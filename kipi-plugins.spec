@@ -1,16 +1,15 @@
 #
-%define		_beta	rc2
 %define		qtver	4.4.3
 
 Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
 Version:	0.2.0
-Release:	0.%{_beta}.1
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}-%{_beta}.tar.bz2
-# Source0-md5:	e853a7929749e69f59e5c7bc9cdd8598
+Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
+# Source0-md5:	cae41d263cc368719f6a51d511bdeab9
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
@@ -32,10 +31,12 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	libxml2-devel >= 2.0.0
 BuildRequires:	libxslt-devel
+BuildRequires:	opencv-devel
 BuildRequires:	pkgconfig
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	sane-backends-devel
 # because of current K_PATH_X definition
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	zlib-devel
@@ -48,7 +49,7 @@ Library KIPI plugins.
 Wtyczki dla biblioteki KIPI.
 
 %prep
-%setup -q -n %{name}-%{version}-%{_beta}
+%setup -q
 
 %build
 install -d build
@@ -72,7 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 
 rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/xx
 
-%find_lang %{name} --all-name
+%find_lang kipiplugin --all-name --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -80,15 +81,17 @@ rm -rf $RPM_BUILD_ROOT
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-%files -f %{name}.lang
+%files -f kipiplugin.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/dngconverter
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_acquireimages.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_advancedslideshow.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_batchprocessimages.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_calendar.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_dngconverter.so
-%attr(755,root,root) %{_libdir}/kde4/kipiplugin_fb.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_facebook.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_flashexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_flickrexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_galleryexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_gpssync.so
@@ -98,20 +101,26 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_jpeglossless.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_metadataedit.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_picasawebexport.so
-%attr(755,root,root) %{_libdir}/kde4/kipiplugin_printwizard.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_printimages.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_rawconverter.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_removeredeyes.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_sendimages.so
-%attr(755,root,root) %{_libdir}/kde4/kipiplugin_simpleviewer.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_smug.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_timeadjust.so
 %attr(755,root,root) %{_libdir}/libkipiplugins.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkipiplugins.so.1
 %{_datadir}/apps/kipiplugin_advancedslideshow
+%{_datadir}/apps/kipiplugin_facebook
+%{_datadir}/apps/kipiplugin_flashexport
+%{_datadir}/apps/kipiplugin_flickrexport
 %{_datadir}/apps/kipiplugin_galleryexport
 %{_datadir}/apps/kipiplugin_htmlexport
 %{_datadir}/apps/kipiplugin_imageviewer
 %{_datadir}/apps/kipiplugin_metadataedit
-%{_datadir}/apps/kipiplugin_simpleviewerexport
+%{_datadir}/apps/kipiplugin_picasawebexport
+%{_datadir}/apps/kipiplugin_removeredeyes
+%{_datadir}/apps/kipiplugin_smug
 %{_datadir}/kde4/services/kipiplugin_*.desktop
 %{_desktopdir}/kde4/dngconverter.desktop
 %{_iconsdir}/hicolor/*/*
+%{_iconsdir}/oxygen/*/*
