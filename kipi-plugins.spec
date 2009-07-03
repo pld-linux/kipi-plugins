@@ -4,12 +4,12 @@
 Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
-Version:	0.2.0
+Version:	0.4.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
-# Source0-md5:	cae41d263cc368719f6a51d511bdeab9
+# Source0-md5:	98835d56e3a50429b360d23c9e589673
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
@@ -17,6 +17,7 @@ BuildRequires:	QtDBus-devel >= %{qtver}
 BuildRequires:	QtGui-devel >= %{qtver}
 BuildRequires:	QtNetwork-devel >= %{qtver}
 BuildRequires:	QtOpenGL-devel >= %{qtver}
+BuildRequires:	QtSvg-devel >= %{qtver}
 BuildRequires:	automoc4
 BuildRequires:	cmake >= 2.6.1-2
 BuildRequires:	exiv2-devel >= 0.12
@@ -24,6 +25,7 @@ BuildRequires:	expat-devel
 BuildRequires:	gettext-devel
 BuildRequires:	kde4-kdegraphics-devel
 BuildRequires:	kde4-kdelibs-devel
+BuildRequires:	kde4-kdepimlibs-devel
 BuildRequires:	libgphoto2-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
@@ -122,5 +124,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/apps/kipiplugin_smug
 %{_datadir}/kde4/services/kipiplugin_*.desktop
 %{_desktopdir}/kde4/dngconverter.desktop
+%{_desktopdir}/kde4/kipiplugins.desktop
 %{_iconsdir}/hicolor/*/*
 %{_iconsdir}/oxygen/*/*
