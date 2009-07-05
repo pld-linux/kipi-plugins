@@ -5,7 +5,7 @@ Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
 Version:	0.4.0
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
@@ -27,6 +27,7 @@ BuildRequires:	kde4-kdegraphics-devel
 BuildRequires:	kde4-kdelibs-devel
 BuildRequires:	kde4-kdepimlibs-devel
 BuildRequires:	libgphoto2-devel
+BuildRequires:	libgpod-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
