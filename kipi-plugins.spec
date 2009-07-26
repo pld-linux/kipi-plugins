@@ -4,12 +4,12 @@
 Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
-Version:	0.4.0
-Release:	3
+Version:	0.5.0
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
-# Source0-md5:	98835d56e3a50429b360d23c9e589673
+# Source0-md5:	f82c95b85f2b434fd03b99451ec5081e
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
@@ -121,6 +121,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/apps/kipiplugin_imageviewer
 %{_datadir}/apps/kipiplugin_metadataedit
 %{_datadir}/apps/kipiplugin_picasawebexport
+%{_datadir}/apps/kipiplugin_printimages
 %{_datadir}/apps/kipiplugin_removeredeyes
 %{_datadir}/apps/kipiplugin_smug
 %{_datadir}/kde4/services/kipiplugin_*.desktop
