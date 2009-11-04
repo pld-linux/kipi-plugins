@@ -4,12 +4,12 @@
 Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
-Version:	0.7.0
+Version:	0.8.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
-# Source0-md5:	564e766f7afac6169ff0cc591667183c
+# Source0-md5:	2049c37dd1bff8f818e379d3c7676389
 URL:		http://extragear.kde.org/apps/kipi/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
@@ -88,6 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/dngconverter
+%attr(755,root,root) %{_bindir}/scangui
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_acquireimages.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_advancedslideshow.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_batchprocessimages.so
@@ -102,6 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_imageviewer.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_ipodexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_jpeglossless.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_kioexportimport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_metadataedit.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_picasawebexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_printimages.so
@@ -112,7 +114,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_timeadjust.so
 %attr(755,root,root) %{_libdir}/libkipiplugins.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkipiplugins.so.1
-%{_datadir}/apps/kipiplugin_advancedslideshow
+#%{_datadir}/apps/kipiplugin_advancedslideshow
 %{_datadir}/apps/kipiplugin_facebook
 %{_datadir}/apps/kipiplugin_flashexport
 %{_datadir}/apps/kipiplugin_flickrexport
@@ -127,5 +129,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/kipiplugin_*.desktop
 %{_desktopdir}/kde4/dngconverter.desktop
 %{_desktopdir}/kde4/kipiplugins.desktop
+%{_desktopdir}/kde4/scangui.desktop
 %{_iconsdir}/hicolor/*/*
 %{_iconsdir}/oxygen/*/*
