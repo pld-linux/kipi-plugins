@@ -130,5 +130,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde4/dngconverter.desktop
 %{_desktopdir}/kde4/kipiplugins.desktop
 %{_desktopdir}/kde4/scangui.desktop
-%{_iconsdir}/hicolor/*/*
-%{_iconsdir}/oxygen/*/*
+%{_iconsdir}/hicolor/*/actions/*
+%{_iconsdir}/oxygen/*/apps/*
