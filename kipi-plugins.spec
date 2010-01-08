@@ -110,6 +110,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_rawconverter.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_removeredeyes.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_sendimages.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_shwup.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_smug.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_timeadjust.so
 %attr(755,root,root) %{_libdir}/libkipiplugins.so.*.*.*
