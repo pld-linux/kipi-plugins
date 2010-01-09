@@ -36,6 +36,7 @@ BuildRequires:	libxml2-devel >= 2.0.0
 BuildRequires:	libxslt-devel
 BuildRequires:	opencv-devel
 BuildRequires:	pkgconfig
+BuildRequires:	qca-devel
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.129
