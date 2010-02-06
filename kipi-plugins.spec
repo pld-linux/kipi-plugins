@@ -26,7 +26,6 @@ BuildRequires:	gettext-devel
 BuildRequires:	kde4-kdegraphics-devel
 BuildRequires:	kde4-kdelibs-devel
 BuildRequires:	kde4-kdepimlibs-devel
-BuildRequires:	libgphoto2-devel
 BuildRequires:	libgpod-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
@@ -41,8 +40,6 @@ BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	sane-backends-devel
-# because of current K_PATH_X definition
-BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
