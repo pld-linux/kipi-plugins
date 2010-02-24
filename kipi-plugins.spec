@@ -1,16 +1,17 @@
 #
-%define		qtver	4.4.3
+%define		qtver	4.6.2
+%define		kdever	4.4.0
 
 Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
-Version:	0.8.0
-Release:	3
+Version:	1.0.0
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
-# Source0-md5:	2049c37dd1bff8f818e379d3c7676389
-URL:		http://extragear.kde.org/apps/kipi/
+# Source0-md5:	4ed822101f0023773361fbe035822934
+URL:		http://www.kipi-plugins.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
 BuildRequires:	QtDBus-devel >= %{qtver}
@@ -19,13 +20,13 @@ BuildRequires:	QtNetwork-devel >= %{qtver}
 BuildRequires:	QtOpenGL-devel >= %{qtver}
 BuildRequires:	QtSvg-devel >= %{qtver}
 BuildRequires:	automoc4
-BuildRequires:	cmake >= 2.6.1-2
+BuildRequires:	cmake >= 2.8.0
 BuildRequires:	exiv2-devel >= 0.12
 BuildRequires:	expat-devel
 BuildRequires:	gettext-devel
-BuildRequires:	kde4-kdegraphics-devel
-BuildRequires:	kde4-kdelibs-devel
-BuildRequires:	kde4-kdepimlibs-devel
+BuildRequires:	kde4-kdegraphics-devel >= %{kdever}
+BuildRequires:	kde4-kdelibs-devel >= %{kdever}
+BuildRequires:	kde4-kdepimlibs-devel >= %{kdever}
 BuildRequires:	libgpod-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
@@ -57,6 +58,7 @@ install -d build
 cd build
 %cmake \
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
+	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
 %if "%{_lib}" == "lib64"
 	-DLIB_SUFFIX=64 \
 %endif
@@ -114,17 +116,17 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkipiplugins.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkipiplugins.so.1
 #%{_datadir}/apps/kipiplugin_advancedslideshow
-%{_datadir}/apps/kipiplugin_facebook
+#%{_datadir}/apps/kipiplugin_facebook
 %{_datadir}/apps/kipiplugin_flashexport
-%{_datadir}/apps/kipiplugin_flickrexport
+#%{_datadir}/apps/kipiplugin_flickrexport
 %{_datadir}/apps/kipiplugin_galleryexport
 %{_datadir}/apps/kipiplugin_htmlexport
 %{_datadir}/apps/kipiplugin_imageviewer
 %{_datadir}/apps/kipiplugin_metadataedit
-%{_datadir}/apps/kipiplugin_picasawebexport
+#%{_datadir}/apps/kipiplugin_picasawebexport
 %{_datadir}/apps/kipiplugin_printimages
 %{_datadir}/apps/kipiplugin_removeredeyes
-%{_datadir}/apps/kipiplugin_smug
+#%{_datadir}/apps/kipiplugin_smug
 %{_datadir}/kde4/services/kipiplugin_*.desktop
 %{_desktopdir}/kde4/dngconverter.desktop
 %{_desktopdir}/kde4/kipiplugins.desktop
