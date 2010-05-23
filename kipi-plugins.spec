@@ -5,12 +5,12 @@
 Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
-Version:	1.0.0
-Release:	2
+Version:	1.2.0
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
-# Source0-md5:	4ed822101f0023773361fbe035822934
+# Source0-md5:	f11471f680f8efde2fa72b76b68134be
 URL:		http://www.kipi-plugins.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
@@ -88,12 +88,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/dngconverter
+%attr(755,root,root) %{_bindir}/expoblending
 %attr(755,root,root) %{_bindir}/scangui
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_acquireimages.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_advancedslideshow.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_batchprocessimages.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_calendar.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_dngconverter.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_expoblending.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_facebook.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_flashexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_flickrexport.so
@@ -106,6 +108,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_kioexportimport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_metadataedit.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_picasawebexport.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_piwigoexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_printimages.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_rawconverter.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_removeredeyes.so
@@ -116,6 +119,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkipiplugins.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkipiplugins.so.1
 #%{_datadir}/apps/kipiplugin_advancedslideshow
+%{_datadir}/apps/kipiplugin_expoblending
 #%{_datadir}/apps/kipiplugin_facebook
 %{_datadir}/apps/kipiplugin_flashexport
 #%{_datadir}/apps/kipiplugin_flickrexport
@@ -124,12 +128,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/apps/kipiplugin_imageviewer
 %{_datadir}/apps/kipiplugin_metadataedit
 #%{_datadir}/apps/kipiplugin_picasawebexport
+%{_datadir}/apps/kipiplugin_piwigoexport
 %{_datadir}/apps/kipiplugin_printimages
 %{_datadir}/apps/kipiplugin_removeredeyes
 #%{_datadir}/apps/kipiplugin_smug
 %{_datadir}/kde4/services/kipiplugin_*.desktop
 %{_desktopdir}/kde4/dngconverter.desktop
 %{_desktopdir}/kde4/kipiplugins.desktop
+%{_desktopdir}/kde4/expoblending.desktop
 %{_desktopdir}/kde4/scangui.desktop
 %{_iconsdir}/hicolor/*/actions/*
 %{_iconsdir}/oxygen/*/apps/*
