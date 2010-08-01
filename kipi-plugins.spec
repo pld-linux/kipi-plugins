@@ -1,16 +1,16 @@
 #
 %define		qtver	4.6.2
-%define		kdever	4.4.0
+%define		kdever	4.5.0
 
 Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
-Version:	1.2.0
+Version:	1.3.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
-# Source0-md5:	f11471f680f8efde2fa72b76b68134be
+# Source0-md5:	01095ed3d523fbc5e27dc9ba3ee47240
 URL:		http://www.kipi-plugins.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
@@ -126,7 +126,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/apps/kipiplugin_galleryexport
 %{_datadir}/apps/kipiplugin_htmlexport
 %{_datadir}/apps/kipiplugin_imageviewer
-%{_datadir}/apps/kipiplugin_metadataedit
+#%{_datadir}/apps/kipiplugin_metadataedit
 #%{_datadir}/apps/kipiplugin_picasawebexport
 %{_datadir}/apps/kipiplugin_piwigoexport
 %{_datadir}/apps/kipiplugin_printimages
