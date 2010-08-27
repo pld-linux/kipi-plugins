@@ -5,12 +5,12 @@
 Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
-Version:	1.3.0
-Release:	2
+Version:	1.4.0
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
-# Source0-md5:	01095ed3d523fbc5e27dc9ba3ee47240
+# Source0-md5:	c4e58884aa8b7bcd815fb1b3d55f144e
 URL:		http://www.kipi-plugins.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
