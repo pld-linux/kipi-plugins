@@ -1,16 +1,16 @@
 #
-%define		qtver	4.6.2
+%define		qtver	4.7.1
 %define		kdever	4.5.0
 
 Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
-Version:	1.6.0
-Release:	3
+Version:	1.7.0
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
-# Source0-md5:	5c9b68818afab24a7fe31e4c9580b81a
+# Source0-md5:	e48a34235abc8db79fa6ebb9ca82c210
 URL:		http://www.kipi-plugins.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
@@ -94,6 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_advancedslideshow.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_batchprocessimages.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_calendar.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_debianscreenshots.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_dngconverter.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_expoblending.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_facebook.so
@@ -106,6 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_ipodexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_jpeglossless.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_kioexportimport.so
+%attr(755,root,root) %{_libdir}/kde4/kipiplugin_kopete.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_metadataedit.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_picasawebexport.so
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_piwigoexport.so
