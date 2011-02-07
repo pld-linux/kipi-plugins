@@ -5,12 +5,12 @@
 Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
-Version:	1.7.0
-Release:	3
-License:	GPL v2
+Version:	1.8.0
+Release:	1
+License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
-# Source0-md5:	e48a34235abc8db79fa6ebb9ca82c210
+Source0:	http://downloads.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
+# Source0-md5:	1e1ad2a3f8328e94ed7c7f92d51a1334
 URL:		http://www.kipi-plugins.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
@@ -40,7 +40,7 @@ BuildRequires:	qca-devel
 BuildRequires:	qjson-devel
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
-BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	rpmbuild(macros) >= 1.600
 BuildRequires:	sane-backends-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -58,11 +58,6 @@ Wtyczki dla biblioteki KIPI.
 install -d build
 cd build
 %cmake \
-	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
-%if "%{_lib}" == "lib64"
-	-DLIB_SUFFIX=64 \
-%endif
 	../
 
 %{__make}
@@ -74,8 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	kde_htmldir=%{_kdedocdir} \
 	kde_libs_htmldir=%{_kdedocdir}
-
-rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/xx
 
 %find_lang kipiplugin --all-name --with-kde
 
@@ -89,6 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/dngconverter
+%attr(755,root,root) %{_bindir}/dnginfo
 %attr(755,root,root) %{_bindir}/expoblending
 %attr(755,root,root) %{_bindir}/scangui
 %attr(755,root,root) %{_libdir}/kde4/kipiplugin_acquireimages.so
