@@ -1,16 +1,18 @@
 #
+# TODO: unpackaged language files
+#
 %define		qtver	4.7.1
 %define		kdever	4.5.0
-
+#
 Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
-Version:	1.8.0
+Version:	1.9.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
-# Source0-md5:	1e1ad2a3f8328e94ed7c7f92d51a1334
+# Source0-md5:	a3200b0ce90251bc631fa90ff0818dc0
 URL:		http://www.kipi-plugins.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
