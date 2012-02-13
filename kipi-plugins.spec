@@ -8,7 +8,7 @@ Summary:	Library KIPI plugins
 Summary(pl.UTF-8):	Wtyczki dla biblioteki KIPI
 Name:		kipi-plugins
 Version:	1.9.0
-Release:	6
+Release:	7
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/kipi/%{name}-%{version}.tar.bz2
@@ -28,12 +28,12 @@ BuildRequires:	expat-devel
 BuildRequires:	gettext-devel
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	kde4-kdepimlibs-devel >= %{kdever}
+BuildRequires:	kde4-libkdcraw-devel >= %{kdever}
+BuildRequires:	kde4-libkexiv2-devel >= %{kdever}
+BuildRequires:	kde4-libkipi-devel >= %{kdever}
+BuildRequires:	kde4-libksane-devel >= %{kdever}
 BuildRequires:	libgpod-devel
 BuildRequires:	libjpeg-devel
-BuildRequires:	libkdcraw-devel >= %{kdever}
-BuildRequires:	libkexiv2-devel >= %{kdever}
-BuildRequires:	libkipi-devel >= %{kdever}
-BuildRequires:	libksane-devel >= %{kdever}
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtiff-devel
