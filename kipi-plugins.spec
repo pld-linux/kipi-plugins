@@ -25,7 +25,7 @@ BuildRequires:	automoc4
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	exiv2-devel >= 0.12
 BuildRequires:	expat-devel
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	kde4-kdepimlibs-devel >= %{kdever}
 BuildRequires:	kde4-libkdcraw-devel >= %{kdever}
